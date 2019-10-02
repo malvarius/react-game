@@ -3,6 +3,7 @@ import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
 import FriendCard from "./components/FriendCard";
 import FriendInfo from "./friends.json";
+import "./index.css"
 
 function randomize(a, b) {  
   return 0.5 - Math.random();
@@ -47,7 +48,8 @@ handleClick(input){
 render() {
   return (
     <Wrapper>
-      <Title>Warcraft Classes {this.state.score}</Title>
+      <Title>Warcraft Classes</Title>
+      <h1 className="score">Score: {this.state.score}</h1>
       
     {this.state.randomFriendInfo.map((person, index) => (
          <FriendCard name={person.name}
