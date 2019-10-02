@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Warrior",
+    "image":
+      "https://www.wowisclassic.com/media/CACHE/images/contents/1369/64157071-451e-4b6d-86ab-838d79caffec/4095a4edf9a0e4de80993ad8789394c4.jpg",
+    "occupation": "Mining/BS",
+    "location": "Melee Combat"
+  },
+  {
+    "id": 2,
+    "name": "Hunter",
+    "image":
+      "https://www.wowisclassic.com/media/CACHE/images/contents/1379/172e5be8-2b53-4dcf-95c0-a98ba9e91ad3/f9b6fdbcc591fbac403aa35d031e7842.jpg",
+    "occupation": "Skinning/LW",
+    "location": "Ranged Combat"
+  },
+  {
+    "id": 3,
+    "name": "Rogue",
+    "image":
+      "https://www.wowisclassic.com/media/CACHE/images/contents/1388/29b7ba3b-75ef-4598-87d6-683f228c3bac/0e66e739f37881866878985403c40f8b.jpg",
+    "occupation": "Herbalism/Alch",
+    "location": "Melee Combat"
+  },
+  {
+    "id": 4,
+    "name": "Priest",
+    "image":
+      "https://www.wowisclassic.com/media/CACHE/images/contents/1397/01aa79cf-43e5-45d6-8eb6-5b34311a64c8/106cd8fb7cb4e7040edc4ee4135e2584.jpg",
+    "occupation": "Tailor/Ench",
+    "location": "Healer/Ranged Cast"
+  },
+  {
+    "id": 5,
+    "name": "Mage",
+    "image":
+      "https://www.wowisclassic.com/media/CACHE/images/contents/1406/d091bce2-5214-4c3f-9548-3c9b9281ea19/2b1b7f25bd2e2ab0094c2fc2dd27365c.jpg",
+    "occupation": "Tailor/Ench",
+    "location": "Ranged Cast"
+  },
+  {
+    "id": 6,
+    "name": "Warlock",
+    "image":
+      "https://www.wowisclassic.com/media/CACHE/images/contents/1415/1b553cb4-3a04-42ab-91e3-b0339a9021e8/511ffac5848220035d5315d0d042da1c.jpg",
+    "occupation": "Tailor/Ench",
+    "location": "Ranged Cast"
+  },
+  {
+    "id": 7,
+    "name": "Druid",
+    "image":
+      "https://www.wowisclassic.com/media/CACHE/images/contents/1423/a8051829-8027-44fb-bc2d-bf9d99c8a87d/70fd437751a315a11b2b4657d52a3849.jpg",
+    "occupation": "Skinner/LW",
+    "location": "All"
+  },
+  {
+    "id": 8,
+    "name": "Shaman",
+    "image":
+      "https://www.wowisclassic.com/media/CACHE/images/contents/1432/6b9aa258-bc2f-47b1-8495-99b3752bfd52/a003da2b30506f1adee0f3621b1c96b0.jpg",
+    "occupation": "Skinner/LW",
+    "location": "All"
+  },
+  {
+    "id": 9,
+    "name": "Paladin",
+    "image":
+      "https://www.wowisclassic.com/media/CACHE/images/contents/1441/e29cc08f-07b9-4583-832c-8574a43519bc/e7e6e4e63989fc419d0621698f40e2da.jpg",
+    "occupation": "Mining/BS",
+    "location": "Healer/Melee"
+  }
+]
