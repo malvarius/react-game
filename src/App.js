@@ -16,7 +16,8 @@ class App extends React.Component {
     super(props)
     this.state = {
       clicked: trueFalseArray,
-      randomFriendInfo: FriendInfo.sort(randomize)
+      randomFriendInfo: FriendInfo.sort(randomize),
+      score: 0
       }
       this.handleClick=this.handleClick.bind(this)
   }
@@ -25,6 +26,7 @@ class App extends React.Component {
 handleClick(input){
   let temp = this.state.clicked.slice(); 
    if(this.state.clicked[input]===false){
+    this.setState({score:this.state.score+1})
     temp[input-1] = true;
      this.setState({clicked:temp})
      console.log('Clicked'+this.state.clicked)
@@ -32,8 +34,9 @@ handleClick(input){
    }
   else{
     temp[input-1] = false;
-     this.setState({clicked:temp})
-    console.log('This was already clicked you lose!')
+     this.setState({clicked:trueFalseArray})
+    alert('This was already clicked you lose!')
+    this.setState({score:0})
     this.setState({randomFriendInfo:FriendInfo.sort(randomize)})
   }
   
@@ -43,7 +46,7 @@ handleClick(input){
 render() {
   return (
     <Wrapper>
-      <Title>Warcraft Classes</Title>
+      <Title>Warcraft Classes {this.state.score}</Title>
       
     {this.state.randomFriendInfo.map((person, index) => (
          <FriendCard name={person.name}

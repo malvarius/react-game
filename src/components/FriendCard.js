@@ -4,7 +4,7 @@ import "./style.css";
 
 function FriendCard(props) {
   return (
-    <div className="card" onClick={props.handleClick} datastuff={props.num} datastate={props.clickedState.toString()}>
+    <div className="card" onClick={props.handleClick} datanum={props.num} datastate={props.clickedState.toString()}>
       <div className="img-container">
         <img
           alt={props.name}
