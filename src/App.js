@@ -25,7 +25,7 @@ class App extends React.Component {
 
 handleClick(input){
   let temp = this.state.clicked.slice(); 
-   if(this.state.clicked[input]===false){
+   if(this.state.clicked[input-1]===false){
     this.setState({score:this.state.score+1})
     temp[input-1] = true;
      this.setState({clicked:temp})
@@ -34,9 +34,10 @@ handleClick(input){
    }
   else{
     temp[input-1] = false;
-     this.setState({clicked:trueFalseArray})
+     this.setState({clicked:temp})
     alert('This was already clicked you lose!')
     this.setState({score:0})
+    this.setState({clicked:trueFalseArray})
     this.setState({randomFriendInfo:FriendInfo.sort(randomize)})
   }
   
