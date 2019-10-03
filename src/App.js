@@ -25,23 +25,29 @@ class App extends React.Component {
 
 
 handleClick(input){
-  let temp = this.state.clicked.slice(); 
-   if(this.state.clicked[input-1]===false){
-    this.setState({score:this.state.score+1})
-    temp[input-1] = true;
-     this.setState({clicked:temp})
-     console.log('Clicked'+this.state.clicked)
-     this.setState({randomFriendInfo:FriendInfo.sort(randomize)})
-   }
-  else{
-    temp[input-1] = false;
-     this.setState({clicked:temp})
-    alert('This was already clicked you lose!')
+  if(this.state.score===8 && this.state.clicked[input-1]===false){
+    alert('You Win!')
     this.setState({score:0})
     this.setState({clicked:trueFalseArray})
     this.setState({randomFriendInfo:FriendInfo.sort(randomize)})
-  }
-  
+  }else{
+    let temp = this.state.clicked.slice(); 
+    if(this.state.clicked[input-1]===false){
+     this.setState({score:this.state.score+1})
+     temp[input-1] = true;
+      this.setState({clicked:temp})
+      console.log('Clicked'+this.state.clicked)
+      this.setState({randomFriendInfo:FriendInfo.sort(randomize)})
+    }
+   else{
+     temp[input-1] = false;
+      this.setState({clicked:temp})
+     alert('This was already clicked you lose!')
+     this.setState({score:0})
+     this.setState({clicked:trueFalseArray})
+     this.setState({randomFriendInfo:FriendInfo.sort(randomize)})
+   }
+  }  
 }
 
 
