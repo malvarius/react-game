@@ -18,7 +18,8 @@ class App extends React.Component {
     this.state = {
       clicked: trueFalseArray,
       randomFriendInfo: FriendInfo.sort(randomize),
-      score: 0
+      score: 0,
+      wins: 0
       }
       this.handleClick=this.handleClick.bind(this)
   }
@@ -30,6 +31,7 @@ handleClick(input){
     this.setState({score:0})
     this.setState({clicked:trueFalseArray})
     this.setState({randomFriendInfo:FriendInfo.sort(randomize)})
+    this.setState({wins:this.state.wins+1})
   }else{
     let temp = this.state.clicked.slice(); 
     if(this.state.clicked[input-1]===false){
@@ -56,7 +58,7 @@ render() {
     <Wrapper>
       <Title>Warcraft Classes</Title>
       <h1 className="score">Score: {this.state.score}</h1>
-      
+      <h1 className="score">Wins: {this.state.wins}</h1>
     {this.state.randomFriendInfo.map((person, index) => (
          <FriendCard name={person.name}
          image={person.image} 
