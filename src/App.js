@@ -3,6 +3,7 @@ import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
 import FriendCard from "./components/FriendCard";
 import FriendInfo from "./friends.json";
+import swal from "sweetalert";
 import "./index.css"
 
 function randomize(a, b) {  
@@ -27,7 +28,12 @@ class App extends React.Component {
 
 handleClick(input){
   if(this.state.score===8 && this.state.clicked[input-1]===false){
-    alert('You Win!')
+    swal({
+      title: "Good job!",
+      text: "You Win!",
+      icon: "success",
+      button: "For the horde!"
+    });
     this.setState({score:0})
     this.setState({clicked:trueFalseArray})
     this.setState({randomFriendInfo:FriendInfo.sort(randomize)})
@@ -44,7 +50,11 @@ handleClick(input){
    else{
      temp[input-1] = false;
       this.setState({clicked:temp})
-     alert('This was already clicked you lose!')
+      swal({
+        title: "Uh OH!!",
+        text: "You Lost!",
+        button: "The horde will not forgive this!",
+      });
      this.setState({score:0})
      this.setState({clicked:trueFalseArray})
      this.setState({randomFriendInfo:FriendInfo.sort(randomize)})
